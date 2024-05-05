@@ -48,6 +48,10 @@ public class TaskConstants {
         taskMap.put(GlobalConstants.POSTMAN_TASK, PostmanTask.class);
         // create open api
         taskMap.put(GlobalConstants.OPEN_API_TASK, OpenApiTask.class);
+        // create open api
+        taskMap.put(GlobalConstants.DRPC_IDL_TASK, DRPCIDLTask.class);
+        // create open api
+        taskMap.put(GlobalConstants.THRIFT_IDL_TASK, ThriftIDLTask.class);
         //create rpc html
         taskMap.put(GlobalConstants.RPC_HTML_TASK, RpcHtmlTask.class);
         // create rpc adoc

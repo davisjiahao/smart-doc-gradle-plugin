@@ -19,17 +19,19 @@ plugins {
 }
 
 group 'com.github.shalousun'
-version '2.7.5'
+version '2.7.6-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
 repositories {
+    maven { url 'http://artifactory.intra.xiaojukeji.com/artifactory/libs-release/' }
+    maven { url 'http://artifactory.intra.xiaojukeji.com/artifactory/libs-snapshot/' }
     maven { url 'https://maven.aliyun.com/repository/public' }
     mavenCentral()
 }
 
 dependencies {
-    implementation group: 'com.github.shalousun', name: 'smart-doc', version: '2.7.5'
+    implementation group: 'com.github.shalousun', name: 'smart-doc', version: '2.7.6-SNAPSHOT'
 }
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
@@ -96,10 +98,10 @@ publishing {
     repositories {
         maven {
             allowInsecureProtocol(true)
-            url "http://localhost:8081/nexus/content/repositories/releases/"
+            url "http://artifactory.intra.xiaojukeji.com/artifactory/libs-snapshot/"
             credentials {
-                username 'admin'
-                password 'admin123'
+                username 'deployment'
+                password 'deployment123'
             }
         }
     }

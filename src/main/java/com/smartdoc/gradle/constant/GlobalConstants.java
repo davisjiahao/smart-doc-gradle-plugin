@@ -68,6 +68,16 @@ public interface GlobalConstants {
     String OPEN_API_TASK = "smartDocOpenApi";
 
     /**
+     * Generate OpenAPI document
+     */
+    String THRIFT_IDL_TASK = "smartThriftIDL";
+
+    /**
+     * Generate OpenAPI document
+     */
+    String DRPC_IDL_TASK = "smartDRPCIDL";
+
+    /**
      * Generate Rpc html document
      */
     String RPC_HTML_TASK = "smartDocRpcHtml";
